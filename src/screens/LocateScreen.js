@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
+import Call from "../Components/Call";
 
 const LocateScreen = () => {
   return (
@@ -9,6 +10,7 @@ const LocateScreen = () => {
         Your location has been tracked by the police and nearest volunteers.
         Help is on the way
       </Text>
+      <Call />
     </View>
   );
 };
