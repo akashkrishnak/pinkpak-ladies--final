@@ -1,21 +1,31 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
+import Call from "../Components/Call";
+/* import Map from "../Components/Map"; */
+/* import useLocation from "../hooks/useLocation"; */
 
 const LocateScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Image style={styles.img} source={require("../img/pinkpal.png")} />
+      {/* <Map />
+      {errorMsg ? <Text>Please enable location services</Text> : null} */}
       <Text style={styles.txt}>
         Your location has been tracked by the police and nearest volunteers.
         Help is on the way
       </Text>
+      <Call />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+  },
   img: {
-    marginLeft: 45,
+    height: 70,
+    width: 100,
   },
   txt: {
     color: "#b80646",
