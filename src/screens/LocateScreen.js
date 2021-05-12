@@ -4,7 +4,9 @@ import Call from "../Components/Call";
 /* import Map from "../Components/Map"; */
 /* import useLocation from "../hooks/useLocation"; */
 
-const LocateScreen = () => {
+const LocationScreen = ({ isFocused}) => {
+    const [errorMsg] = useLocation(isFocused);
+  
   return (
     <View style={styles.container}>
       <Image style={styles.img} source={require("../img/pinkpal.png")} />
