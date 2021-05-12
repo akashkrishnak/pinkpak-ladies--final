@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 import Call from "../Components/Call";
-/* import Map from "../Components/Map"; */
-/* import useLocation from "../hooks/useLocation"; */
+import Map from "../Components/Map"; 
+import useLocation from "../hooks/useLocation"; 
 
 const LocationScreen = ({ isFocused}) => {
     const [errorMsg] = useLocation(isFocused);
@@ -10,8 +10,8 @@ const LocationScreen = ({ isFocused}) => {
   return (
     <View style={styles.container}>
       <Image style={styles.img} source={require("../img/pinkpal.png")} />
-      {/* <Map />
-      {errorMsg ? <Text>Please enable location services</Text> : null} */}
+      { <Map />
+      {errorMsg ? <Text>Please enable location services</Text> : null} }
       <Text style={styles.txt}>
         Your location has been tracked by the police and nearest volunteers.
         Help is on the way
